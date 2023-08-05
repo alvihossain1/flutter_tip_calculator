@@ -95,7 +95,7 @@ class _CalculatorState extends State<Calculator> {
             ),
             SampleInputField(
               controller: totalPeopleController,
-              fieldName: "Numer of people",
+              fieldName: "Number of people",
               hintText: "Please enter number of peolpe",
             ),
             SizedBox(
@@ -103,8 +103,10 @@ class _CalculatorState extends State<Calculator> {
             ),
             Row(
               children: [
-                sampleButton(buttonText: "Calculate", buttonBackgroundColor: Colors.black),
-                sampleButton(buttonText: "Clear", buttonBackgroundColor: clearButtonColor),
+                Expanded(
+                  child: sampleButton(buttonText: "Calculate", buttonBackgroundColor: Colors.black, formKey: formKey),
+                ),
+                sampleButton(buttonText: "Clear", buttonBackgroundColor: clearButtonColor, formKey: formKey),
               ],
             )
 

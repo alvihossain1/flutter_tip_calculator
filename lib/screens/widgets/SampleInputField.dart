@@ -18,8 +18,6 @@ class _SampleInputFieldState extends State<SampleInputField> {
   static const Color containerColor = Color(0xffF5F8FB);
   static const Color textBlack = Color(0xff232323);
   static const Color textLightBlack = Color(0xff717171);
-  static const Color clearButtonColor = Color(0xffFF7511);
-
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +52,20 @@ class _SampleInputFieldState extends State<SampleInputField> {
           ),
 
           onFieldSubmitted: (value){
-            if(value.isEmpty){
+            if(value.isEmpty)
+            {
               widget.controller.text = "0.00";
             }
+            widget.controller.text = value.toString();
+            setState(() {});
           },
+
+          onSaved: (value){
+            widget.controller.text = value.toString();
+            setState(() {});
+          },
+
+
 
 
         ),
