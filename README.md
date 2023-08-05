@@ -1,6 +1,7 @@
-# class_2
+# Flutter Tip Calculator
 
-A new Flutter project.
+Flutter Tip Calculator - Form handling etc
+Mobile Application Development - CSE464
 
 ## Getting Started
 
